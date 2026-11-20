@@ -1,91 +1,105 @@
-# Nome do Jogo
+# Protocolo ORÁCULO
 
-Projeto final da disciplina de Introdução a Algoritmos/Programação, desenvolvido com Python e Pygame.
-
-Este repositório é um template para os grupos da disciplina. A proposta é começar com uma base funcional e evoluir o jogo ao longo do semestre.
+Projeto final da disciplina de Introdução a Algoritmos, desenvolvido com Python e Pygame.
 
 ## Integrantes do grupo
 
-- Nome do integrante 1
-- Nome do integrante 2
-- Nome do integrante 3
-- Nome do integrante 4
+- Giovanni
+- Yandi Orlando Santos Rivero
+- Luiz Gibim
+- Victor Dante
 
 ## Estrutura do projeto
 
-- `main.py`: ponto de entrada da aplicação.
-- `src/`: código-fonte principal do jogo (loop, regras, sprites e dados).
+- `main.py`: ponto de entrada do jogo.
+- `src/`: código principal, regras, movimentação e lógica dos puzzles.
 - `assets/`: imagens, fontes e sons.
-- `data/`: arquivos persistentes (recorde/ranking).
-- `tests/`: testes unitários com `pytest`.
-- `docs/`: documentação do projeto, incluindo proposta inicial.
+- `data/`: arquivos de recordes e ranking.
+- `tests/`: testes automatizados com pytest.
+- `docs/`: documentação e proposta do jogo.
 
 ## Descrição do jogo
 
-Descreva brevemente a ideia principal do jogo.
+Protocolo ORÁCULO é um dungeon crawler 2D focado em puzzles e no uso responsável da inteligência artificial.
 
-Exemplo:
+O jogador precisa escapar de uma dungeon resolvendo desafios. Uma IA fornece recomendações que podem estar corretas ou incorretas, enquanto o cenário apresenta pistas que permitem verificar essas informações.
 
-> O jogo consiste em controlar um personagem que deve coletar moedas e evitar obstáculos. O jogador ganha pontos ao coletar itens e perde vidas ao colidir com obstáculos. A partida termina quando o tempo acaba ou quando o jogador perde todas as vidas.
+Atualmente, o jogo possui uma sala demonstrativa com três portas, sendo apenas uma segura.
 
 ## Objetivo do jogador
 
-Explique o que o jogador precisa fazer para vencer ou avançar no jogo.
+Resolver os puzzles, identificar as recomendações incorretas da IA e escapar da dungeon.
 
-Exemplo:
-
-> O objetivo é coletar a maior quantidade possível de itens antes que o tempo acabe, evitando colisões com os obstáculos.
+A versão final está planejada para conter três salas, mas a versão atual possui apenas a primeira.
 
 ## Regras do jogo
 
-Liste as principais regras do jogo.
-
-Exemplo:
-
-- O jogador se movimenta usando as setas do teclado.
-- Cada item coletado aumenta a pontuação.
-- Colidir com um obstáculo reduz a quantidade de vidas.
-- A partida termina quando o jogador perde todas as vidas ou quando o tempo acaba.
+- O jogador deve encontrar a porta segura para avançar.
+- A IA recomenda uma porta, mas pode estar errada.
+- O cenário contém pistas que ajudam a identificar a escolha correta.
+- Escolher uma porta incorreta causa morte instantânea.
+- Após vencer ou morrer, o jogador pode reiniciar a partida.
+- O tempo da tentativa é registrado.
 
 ## Controles
 
-Informe as teclas ou comandos utilizados no jogo.
-
-Exemplo:
-
-- Seta para cima: mover para cima
-- Seta para baixo: mover para baixo
-- Seta para esquerda: mover para esquerda
-- Seta para direita: mover para direita
-- Espaço: realizar ação
-- ESC: sair do jogo
+- `WASD` ou `setas`: movimentar o personagem.
+- `E`: interagir com portas e objetos.
+- `Q`: consultar a recomendação da IA.
+- `R`: reiniciar a partida.
+- `ESC`: fechar o jogo.
 
 ## Como executar o projeto
 
-### 1. Clonar o repositório
+### 1. Abrir a pasta do projeto
+
+Abra a pasta principal do repositório no VS Code e acesse o terminal.
+
+### 2. Instalar as dependências
 
 ```bash
-git clone LINK_DO_REPOSITORIO
-cd NOME_DA_PASTA
-pip install -r requirements.txt
+python -m pip install -r requirements.txt
+```
+
+### 3. Executar o jogo
+
+```bash
 python main.py
 ```
 
 ## Como executar os testes
 
+No terminal, dentro da pasta principal do projeto, execute:
+
 ```bash
-python -m pytest
+python -m pytest -v
 ```
 
-## Checklist mínimo para entrega
+Os testes verificam funções do template original e as regras do puzzle do ORÁCULO.
 
-- Preencher este README com nome final, descrição real, regras e controles do jogo.
-- Atualizar `docs/proposta.MD` com a proposta do grupo.
-- Garantir que o jogo executa com `python main.py`.
-- Garantir que os testes passam com `pytest`.
+## Estado atual do projeto
 
-## Observações para os alunos
+**Ponto de Controle 02 — Versão parcial executável**
 
-- Mantenham o código organizado em módulos pequenos e com responsabilidade clara.
-- Comentem partes importantes da lógica, principalmente regras do jogo.
-- Registrem decisões técnicas no README do grupo ao longo do desenvolvimento.
+Funcionalidades implementadas:
+
+- Janela e loop principal do Pygame.
+- Movimentação do personagem.
+- Primeira sala com três portas.
+- Recomendações da IA que podem estar corretas ou incorretas.
+- Pistas visuais e objeto investigável.
+- Vitória, morte instantânea e reinício.
+- Cronômetro da tentativa.
+- Testes automatizados.
+
+**Funcionalidades planejadas para a versão final:**
+
+- Três salas com puzzles diferentes.
+- Cenários e personagens em pixel art.
+- Variação das soluções dos desafios.
+- Ranking de melhores tempos.
+- Melhorias visuais e sonoras, caso haja tempo.
+
+## Observações
+
+A implementação atual é uma versão demonstrativa, que será ampliada nas próximas etapas do trabalho.
