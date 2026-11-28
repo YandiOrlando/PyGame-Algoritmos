@@ -88,6 +88,7 @@ Funcionalidades implementadas:
 - Primeira sala com três portas.
 - Recomendações da IA que podem estar corretas ou incorretas.
 - Pistas visuais e objeto investigável.
+- Cenário de dungeon com paredes de pedra, piso de lajes, tochas e portas decoradas.
 - Vitória, morte instantânea e reinício.
 - Cronômetro da tentativa.
 - Testes automatizados.
@@ -98,7 +99,7 @@ Funcionalidades implementadas:
 - Cenários e personagens em pixel art.
 - Variação das soluções dos desafios.
 - Ranking de melhores tempos.
-- Melhorias visuais e sonoras, caso haja tempo.
+- Efeitos sonoros e trilha, caso haja tempo.
 
 ## Observações
 
